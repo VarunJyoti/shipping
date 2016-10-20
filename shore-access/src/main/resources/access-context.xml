@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:tx="http://www.springframework.org/schema/tx"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:p="http://www.springframework.org/schema/p"	
+xmlns:mvc="http://www.springframework.org/schema/mvc" 
+xmlns:context="http://www.springframework.org/schema/context"	
+xsi:schemaLocation="
+http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd	        
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+http://www.springframework.org/schema/mvc 
+http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+http://www.springframework.org/schema/tx 
+http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:database.properties</value>
+				<value>classpath:server.properties</value>
+				<value>classpath:mail.properties</value>
+				<value>classpath:log4j.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="properties" class="com.shore.access.util.PropertiesReader">
+        <constructor-arg value="server.properties"/>
+    </bean>
+
+
+	<context:component-scan base-package="com" />
+	<mvc:annotation-driven />
+
+
+	
+<!-- 	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${jdbc.driverClassName}">
+		</property>
+		<property name="url" value="${jdbc.url}">
+		</property>
+		<property name="username" value="${jdbc.username}"></property>
+		<property name="password" value="${jdbc.password}"></property>
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+
+		<property name="packagesToScan" value="com.shore.dao.vo"/>
+
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">false</prop>
+			    <prop key="hibernate.current_session_context_class">thread</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+				<prop key="hibernate.cache.use_second_level_cache">false</prop>
+				<prop key="hibernate.cache.use_query_cache">false</prop>
+				<prop key="hibernate.cache.provider_configuration_file_resource_path">/WEB-INF/classes/ehcache.xml</prop>
+			</props>
+		</property>
+		
+	</bean> 
+
+ 	 <bean id="transactionManager"
+        class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    -->
+
+
+  <!-- 	 <bean id="sender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+      
+      Auth using SSL
+     
+        <property name="host"><value>${mail.host}</value></property>
+        <property name="port"><value>${mail.port}</value></property>
+        <property name="protocol"><value>${mail.protocol}</value></property>
+        <property name="username"><value>${mail.username}</value></property>
+        <property name="password"><value>${mail.password}</value></property>
+        <property name="javaMailProperties">
+            <props>
+            	
+            	<prop key="mail.smtp.starttls.enable">true</prop>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.debug">false</prop>
+                 <prop key="mail.smtp.socketFactory.port">${mail.port}</prop>                
+                <prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+                <prop key="mail.smtp.quitwait">false</prop>
+            </props>
+        </property> 
+      
+       
+  
+   </bean>
+-->
+   
+<!--     <bean id="sendMail" class="com.ship.mail.SendMail">
+        <property name="sender" ref="sender"/>
+    </bean> -->
+	
+	     	<!--Plain Auth -->
+      <!--    <property name="host"><value>${mail.host}</value></property>
+        <property name="port"><value>${mail.port}</value></property>
+        <property name="protocol"><value>${mail.protocol}</value></property>
+        <property name="username"><value>${mail.username}</value></property>
+        <property name="password"><value>${mail.password}</value></property>
+        
+		<property name="javaMailProperties">
+        <props>
+           
+            <prop key="mail.smtp.auth">true</prop>
+            <prop key="mail.debug">false</prop>
+            
+        </props>
+        </property> -->
+	
+ <tx:annotation-driven/>
+</beans>
