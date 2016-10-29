@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1477723021045_1" label="shore-root" name="shore-root">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/shore-access" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/shore-bl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/shore-dao" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1477722949963_0" label="Window Working Set" name="Aggregate for window 1477722949962"/>
+</workingSetManager>

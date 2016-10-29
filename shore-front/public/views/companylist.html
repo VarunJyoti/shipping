@@ -1,0 +1,25 @@
+<div class="companyheader"><h3 class="panel-title"><i class="fa fa-tasks"></i> Company List</h3>
+<button class="btn btn-primary" ng-click="addEditCompany()">Add Company</button><br></div>
+<div class="companyBody"><table st-table="rowCollection" class="table table-striped">
+	    <thead>
+	      <tr>
+		      <th>Company name</th>
+		      <th>Username</th>
+		      <th>Address</th>
+	      	<th>phone number</th>
+	      	<th>Email</th>
+      	</tr>
+    	</thead>
+    	<tbody>
+      	<tr ng-repeat="row in rowCollection">
+      		<td>{{row.name}}</td>
+        	<td>{{row.address}}</td>
+      		<td>{{row.phone}}</td>
+    	  	<td>{{row.username}}</td>
+      		<td>{{row.email}}</td>
+          <td><i class="fa fa-pencil" ng-click="addEditCompany(row)"></i></td>
+          <td><i class="fa fa-trash"></i></td>
+       	</tr>
+	    </tbody>
+    </table>
+ </div>   

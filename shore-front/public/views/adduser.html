@@ -1,0 +1,41 @@
+<div class="panel panel-blue margin-bottom-40">
+    <div class="panel-heading">
+      <h3 class="panel-title"><i class="fa fa-tasks"></i> Add User</h3>
+    </div>
+    <div class="panel-body">
+      <form class="margin-bottom-40" role="form">
+      <div class="form-group">
+          <label>Name</label>
+          <input type="text" ng-model="record.firstName" class="form-control" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="text" class="form-control" ng-model="record.phone" placeholder="Enter Phone no">
+        </div>
+        <div class="form-group">
+          <label>Email address</label>
+          <input type="email" class="form-control" ng-model="record.email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label>User Name</label>
+          <input type="text" class="form-control" ng-model="record.lastName" placeholder="Enter username">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" ng-model="record.password" placeholder="Password">
+        </div>
+        <div class="form-group">
+        <label>Select Permissions</label><br>
+          <div class="checkbox-inline">
+            <label><input type="checkbox" value="">Daily entry</label>
+          </div>
+          <div class="checkbox-inline">
+            <label><input type="checkbox" value="">Reporting</label>
+          </div>
+        </div>
+        
+        <button type="submit" class="btn-u btn-u-blue btn-primary">Submit</button>
+        <button class="btn-u btn-u-blue btn-default" ng-click="goBack()">Cancel</button>
+      </form>
+    </div>
+  </div>

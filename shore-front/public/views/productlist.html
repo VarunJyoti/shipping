@@ -1,0 +1,21 @@
+<div class="companyheader"><h3 class="panel-title"><i class="fa fa-tasks"></i> Product List</h3>
+<button class="btn btn-primary" ng-click="addEditProduct()">Add Product</button><br></div>
+<div class="companyBody"><table st-table="rowCollection" class="table table-striped">
+	    <thead>
+	      <tr>
+		      <th>Name</th>
+		      <th>Price/gallon</th>
+		      <th>Quantity(in gallons)</th>
+      	</tr>
+    	</thead>
+    	<tbody>
+      	<tr ng-repeat="row in rowCollection">
+      		<td>{{row.name}}</td>
+        	<td>{{row.price}}</td>
+      		<td>{{row.quantity}}</td>
+          <td><i class="fa fa-pencil" ng-click="addEditProduct(row)"></i></td>
+          <td><i class="fa fa-trash"></i></td>
+       	</tr>
+	    </tbody>
+    </table>
+ </div>   

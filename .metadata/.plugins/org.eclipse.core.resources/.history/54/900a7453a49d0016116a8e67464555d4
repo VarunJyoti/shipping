@@ -1,0 +1,19 @@
+jdbc.driverClassName=com.mysql.jdbc.Driver
+hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
+
+#--local server--
+jdbc.url=jdbc:mysql://localhost/mrn_shore
+jdbc.username=root
+jdbc.password=root
+
+#--Test server-------
+#jdbc.url=jdbc:mysql://54.152.211.65/mrn_shore
+#jdbc.username=sampleboard
+#jdbc.password=S@mpl3@2k!5
+
+
+#--Live server-------
+#jdbc.url=jdbc:mysql://localhost/mrn_shore
+#jdbc.username=
+#jdbc.password=
